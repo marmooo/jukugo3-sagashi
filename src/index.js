@@ -125,7 +125,6 @@ function showSolved(reply, hinted) {
         if (k == idiom.length - 1) {
           var pos = i - k + 1;
           if (processed[pos]) {
-            prependIdiomLink(idiom, true);
             var idx = findMeiroIndex(l+1);
             var td = trs[Math.floor(idx / size)].children[idx % size];
             if (td.classList.contains('table-secondary')) {
