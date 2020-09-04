@@ -16,7 +16,7 @@
    sodipodi:docname="original.svg"
    style="fill:currentColor"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   inkscape:export-filename="/home/matsuda/Dropbox/jukugo3-sagashi/src/favicon/original.png"
+   inkscape:export-filename="/home/matsuda/workspace/jukugo3-sagashi/src/favicon/original.png"
    inkscape:export-xdpi="1920"
    inkscape:export-ydpi="1920">
   <metadata
@@ -48,7 +48,7 @@
      showgrid="false"
      showguides="false"
      inkscape:zoom="7.375"
-     inkscape:cx="45.709854"
+     inkscape:cx="0.15053231"
      inkscape:cy="16.812654"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -59,11 +59,6 @@
      id="path2"
      inkscape:connector-curvature="0"
      style="fill-rule:evenodd;stroke-width:2.14559031" />
-  <path
-     d="m 21.999999,40.610548 a 18.615386,18.615386 0 1 0 0,-37.2307724 18.615386,18.615386 0 0 0 0,37.2307724 z m 22,-18.615388 A 22,22 0 1 1 6.4958463e-8,21.99516 22,22 0 0 1 43.999999,21.99516 Z"
-     id="path4"
-     inkscape:connector-curvature="0"
-     style="fill-rule:evenodd;stroke-width:3.38461494" />
   <ellipse
      style="fill:#ffffff;stroke:#ffffff;stroke-width:1.07982039;stroke-opacity:1"
      id="path12"
@@ -71,6 +66,11 @@
      cy="21.898306"
      rx="19.214327"
      ry="19.14653" />
+  <path
+     d="m 21.999999,40.610548 a 18.615386,18.615386 0 1 0 0,-37.2307724 18.615386,18.615386 0 0 0 0,37.2307724 z m 22,-18.615388 A 22,22 0 1 1 6.4958463e-8,21.99516 22,22 0 0 1 43.999999,21.99516 Z"
+     id="path4"
+     inkscape:connector-curvature="0"
+     style="fill-rule:evenodd;stroke-width:3.38461494" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
