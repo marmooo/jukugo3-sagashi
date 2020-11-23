@@ -37,28 +37,30 @@
     </style>
   </head>
   <body>
-    <nav id="header" class="navbar navbar-expand navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="/jukugo3-sagashi/">
-          <ruby>三字<rp>(</rp><rt>さんじ</rt><rp>)</rp></ruby><ruby>熟語<rp>(</rp><rt>じゅくご</rt><rp>)</rp></ruby>さがし
-        </a>
-        <div class="navbar-nav">
-          <select id="levelOption" class="ml-1 form-control form-control-sm">
-            <option disabled>小1</option>
-            <option>小2</option>
-            <option>小3</option>
-            <option selected>小4</option>
-            <option>小5</option>
-            <option>小6</option>
-            <option>中1/2</option>
-            <option>中3</option>
-            <option>大人</option>
-          </select>
-          <button title="ダークモード切替" onclick="toggleDarkMode()" class="ml-2 close">🌓</button>
+    <header id="header">
+      <nav class="navbar navbar-expand navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="/jukugo3-sagashi/">
+            <ruby>三字<rp>(</rp><rt>さんじ</rt><rp>)</rp></ruby><ruby>熟語<rp>(</rp><rt>じゅくご</rt><rp>)</rp></ruby>さがし
+          </a>
+          <div class="navbar-nav">
+            <select id="levelOption" class="ml-1 form-control form-control-sm" aria-label="学年">
+              <option disabled>小1</option>
+              <option>小2</option>
+              <option>小3</option>
+              <option selected>小4</option>
+              <option>小5</option>
+              <option>小6</option>
+              <option>中1/2</option>
+              <option>中3</option>
+              <option>大人</option>
+            </select>
+            <button title="ダークモード切替" onclick="toggleDarkMode()" class="ml-2 close">🌓</button>
+          </div>
         </div>
-      </div>
-    </nav>
-    <div class="container text-center">
+      </nav>
+    </header>
+    <main class="container text-center">
       <noscript>
         <div class="alert alert-warning">JavaScript を ON にしてください</div>
       </noscript>
@@ -89,7 +91,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <footer class="pt-4 alert text-center">
       <div>
         <a class="px-1" href="/">Home</a>
