@@ -1,7 +1,8 @@
-var CACHE_NAME = '2021-06-17 00:05';
+var CACHE_NAME = '2021-06-19 19:20';
 var urlsToCache = [
   '/jukugo3-sagashi/',
   '/jukugo3-sagashi/index.js',
+  '/jukugo3-sagashi/favicon/original.svg',
   'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css',
 ];
 
