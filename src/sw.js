@@ -1,9 +1,9 @@
-var CACHE_NAME = '2021-06-20 10:30';
+var CACHE_NAME = '2021-06-24 07:06';
 var urlsToCache = [
   '/jukugo3-sagashi/',
   '/jukugo3-sagashi/index.js',
   '/jukugo3-sagashi/favicon/original.svg',
-  'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css',
+  'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
 ];
 
 self.addEventListener('install', function(event) {
