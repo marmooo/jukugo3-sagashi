@@ -578,10 +578,16 @@ resizeFontSize(meiroObj);
 window.addEventListener("resize", function () {
   resizeFontSize(meiroObj);
 });
-generateGame();
-strictSolution();
-while (solvedPanel.firstChild)solvedPanel.removeChild(solvedPanel.firstChild);
-showAnswer();
+
+fetch("words.lst").then(response => response.text()).then(text => {
+  text.trim().split("\n").forEach(line => {
+    idiomsList.push(line.split(","));
+  });
+  generateGame();
+  strictSolution();
+  while (solvedPanel.firstChild)solvedPanel.removeChild(solvedPanel.firstChild);
+  showAnswer();
+});
 
 document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("startButton").onclick = startGame;
