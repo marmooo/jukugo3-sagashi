@@ -1,4 +1,4 @@
-var CACHE_NAME = '2021-11-16 00:50';
+var CACHE_NAME = '2022-02-15 00:50';
 var urlsToCache = [
   "/jukugo3-sagashi/",
   "/jukugo3-sagashi/index.js",

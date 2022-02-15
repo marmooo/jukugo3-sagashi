@@ -49,7 +49,6 @@ let idioms;
 let words = w4;
 loadConfig();
 
-
 function loadConfig() {
   if (localStorage.getItem("darkMode") == 1) {
     document.documentElement.dataset.theme = "dark";
@@ -231,14 +230,14 @@ function generateRandomText(text, isAnswer) {
     const first = text[0];
     for (let i = 0; i < 5; i++) { // どうしても熟語ができてしまうケースがあるため回数打ち切り
       text = first + words[getRandomInt(0, words.length)];
-      if (!includeIdiom(text))return text;
+      if (!includeIdiom(text)) return text;
     }
   } else {
     for (let i = 0; i < 5; i++) { // どうしても熟語ができてしまうケースがあるため回数打ち切り
       for (let j = 0; j < 2; j++) {
         text[j] = words[getRandomInt(0, words.length)];
       }
-      if (!includeIdiom(text))return text;
+      if (!includeIdiom(text)) return text;
     }
   }
   return text;
@@ -290,7 +289,9 @@ function strictSolution() {
 }
 
 function startGame() {
-  while (solvedPanel.firstChild)solvedPanel.removeChild(solvedPanel.firstChild);
+  while (solvedPanel.firstChild) {
+    solvedPanel.removeChild(solvedPanel.firstChild);
+  }
   generateGame();
   strictSolution();
   const startButton = document.getElementById("startButton");
@@ -359,7 +360,7 @@ function _p() {
 function isPassable(x, y, direction, n) {
   let passable = true;
   if (direction == 1) {
-    if (x - n < 0)return false;
+    if (x - n < 0) return false;
     for (let i = 0; i < n; i++) {
       if (meiro[x - i][y] != 0) {
         passable = false;
@@ -367,7 +368,7 @@ function isPassable(x, y, direction, n) {
       }
     }
   } else if (direction == 2) {
-    if (size <= x + n)return false;
+    if (size <= x + n) return false;
     for (let i = 0; i < n; i++) {
       if (meiro[x + i][y] != 0) {
         passable = false;
@@ -375,7 +376,7 @@ function isPassable(x, y, direction, n) {
       }
     }
   } else if (direction == 3) {
-    if (y - n < 0)return false;
+    if (y - n < 0) return false;
     for (let i = 0; i < n; i++) {
       if (meiro[x][y - i] != 0) {
         passable = false;
@@ -383,7 +384,7 @@ function isPassable(x, y, direction, n) {
       }
     }
   } else {
-    if (size <= y + n)return false;
+    if (size <= y + n) return false;
     for (let i = 0; i < n; i++) {
       if (meiro[x][y + i] != 0) {
         passable = false;
@@ -430,7 +431,7 @@ function generateGame() {
           break;
         }
       }
-      if (!painted)break;
+      if (!painted) break;
     }
     if (i == problemNum) {
       if (directionCount != 0 && directionCount != problemNum) {
@@ -441,7 +442,7 @@ function generateGame() {
   }
   processed = new Array(counter); // 回答リストのキャッシュを生成
   const meiroNode = document.getElementById("meiro");
-  while (meiroNode.firstChild)meiroNode.removeChild(meiroNode.firstChild);
+  while (meiroNode.firstChild) meiroNode.removeChild(meiroNode.firstChild);
   for (let x = 0; x < size; x++) {
     const tr = document.createElement("tr");
     meiroNode.appendChild(tr);
@@ -496,7 +497,8 @@ function resizeFontSize(node) {
   function getNodeRect() {
     const width = document.getElementById("container").clientWidth;
     const headerHeight = document.getElementById("header").clientHeight;
-    const startButtonHeight = document.getElementById("startButton").clientHeight;
+    const startButtonHeight =
+      document.getElementById("startButton").clientHeight;
     const height = document.documentElement.clientHeight - headerHeight -
       startButtonHeight;
     return [width, height];
@@ -537,23 +539,26 @@ function toggleDarkMode() {
   }
 }
 
-
 const meiroObj = document.getElementById("meiro");
 resizeFontSize(meiroObj);
 window.addEventListener("resize", function () {
   resizeFontSize(meiroObj);
 });
 
-fetch("words.lst").then(response => response.text()).then(text => {
-  text.trim().split("\n").forEach(line => {
-    idiomsList.push(line.split(","));
+fetch("words.lst")
+  .then((response) => response.text())
+  .then((text) => {
+    text.trim().split("\n").forEach((line) => {
+      idiomsList.push(line.split(","));
+    });
+    idioms = idiomsList[3];
+    generateGame();
+    strictSolution();
+    while (solvedPanel.firstChild) {
+      solvedPanel.removeChild(solvedPanel.firstChild);
+    }
+    showAnswer();
   });
-  idioms = idiomsList[3];
-  generateGame();
-  strictSolution();
-  while (solvedPanel.firstChild)solvedPanel.removeChild(solvedPanel.firstChild);
-  showAnswer();
-});
 
 document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("startButton").onclick = startGame;
