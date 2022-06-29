@@ -450,8 +450,8 @@ function generateGame() {
       const td = document.createElement("td");
       td.textContent = words[getRandomInt(0, words.length)];
       tr.appendChild(td);
-      td.onclick = function () {
-        this.classList.toggle("table-primary");
+      td.onclick = () => {
+        td.classList.toggle("table-primary");
       };
     }
   }
@@ -493,7 +493,7 @@ function toggleDarkMode() {
 
 const meiroObj = document.getElementById("meiro");
 resizeFontSize(meiroObj);
-window.addEventListener("resize", function () {
+window.addEventListener("resize", () => {
   resizeFontSize(meiroObj);
 });
 
@@ -516,8 +516,9 @@ document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("startButton").onclick = startGame;
 document.getElementById("answerButton").onclick = showAnswer;
 document.getElementById("hintButton").onclick = showHint;
-document.getElementById("levelOption").addEventListener("change", function () {
-  idioms = idiomsList[this.selectedIndex];
-  words = wordsList[this.selectedIndex];
+document.getElementById("levelOption").addEventListener("change", (event) => {
+  const obj = event.target;
+  idioms = idiomsList[obj.selectedIndex];
+  words = wordsList[obj.selectedIndex];
   startGame();
 });
