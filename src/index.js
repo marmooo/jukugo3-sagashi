@@ -473,7 +473,7 @@ function generateGame() {
 }
 
 function resizeFontSize(node) {
-  const meiroSize = document.getElementById("meiroOuter").offsetWidth;
+  const meiroSize = document.getElementById("masu").offsetWidth;
   const margin = 1.2;  // 小さすぎると overflow で表示が崩れる
   const padding = remSize * 8;
   const border = 9;
