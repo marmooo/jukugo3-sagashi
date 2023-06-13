@@ -107,7 +107,6 @@ function prependIdiomLink(idiom, correct) {
   } else {
     a.className = "btn btn-secondary m-1";
   }
-  a.role = "button";
   solvedPanel.prepend(a);
 }
 

@@ -36,7 +36,7 @@
       #masu { width:100%; max-height:calc(100vh - 180px); aspect-ratio:1/1; }
       #table { height:100%; table-layout:fixed; }
       #meiro { line-height:1.1; touch-action:manipulation; }
-      td { padding: 0.25rem !important; }
+      td { padding: 0.25rem !important; cursor:pointer; }
       html[data-theme="dark"] { filter: invert(1) hue-rotate(180deg) brightness(1.5); }
       @-moz-document url-prefix() { html[data-theme="dark"] { background-color:black; } }
     </style>
@@ -80,7 +80,88 @@
         <div class="col-md-8 notranslate">
           <div id="masu">
             <table id="table" class="mt-3 table table-striped table-bordered align-middle">
-              <tbody id="meiro"></tbody>
+              <tbody id="meiro">
+                <tr>
+                  <td>岩</td>
+                  <td>歌</td>
+                  <td>州</td>
+                  <td class="table-danger">達</td>
+                  <td class="table-danger">成</td>
+                  <td class="table-danger">感</td>
+                  <td class="table-danger">決</td>
+                  <td>養</td>
+                </tr>
+                <tr>
+                  <td class="table-danger">見</td>
+                  <td class="table-danger">聞</td>
+                  <td class="table-danger">録</td>
+                  <td class="table-danger">高</td>
+                  <td class="table-danger">周</td>
+                  <td class="table-danger">波</td>
+                  <td class="table-danger">定</td>
+                  <td>念</td>
+                </tr>
+                <tr>
+                  <td>無</td>
+                  <td>飯</td>
+                  <td>昼</td>
+                  <td>年</td>
+                  <td>空</td>
+                  <td>争</td>
+                  <td class="table-danger">的</td>
+                  <td class="table-danger">最</td>
+                </tr>
+                <tr>
+                  <td>関</td>
+                  <td>刷</td>
+                  <td>門</td>
+                  <td>力</td>
+                  <td class="table-danger">無</td>
+                  <td class="table-danger">料</td>
+                  <td class="table-danger">化</td>
+                  <td class="table-danger">下</td>
+                </tr>
+                <tr>
+                  <td class="table-danger">必</td>
+                  <td>祭</td>
+                  <td>実</td>
+                  <td>度</td>
+                  <td class="table-danger">変</td>
+                  <td>古</td>
+                  <td>注</td>
+                  <td class="table-danger">位</td>
+                </tr>
+                <tr>
+                  <td class="table-danger">然</td>
+                  <td>訓</td>
+                  <td>皿</td>
+                  <td>岸</td>
+                  <td class="table-danger">化</td>
+                  <td>住</td>
+                  <td class="table-danger">全</td>
+                  <td>学</td>
+                </tr>
+                <tr>
+                  <td class="table-danger">的</td>
+                  <td>村</td>
+                  <td>落</td>
+                  <td>役</td>
+                  <td class="table-danger">球</td>
+                  <td>整</td>
+                  <td class="table-danger">体</td>
+                  <td>医</td>
+                </tr>
+                <tr>
+                  <td>東</td>
+                  <td>泳</td>
+                  <td>各</td>
+                  <td class="table-danger">相</td>
+                  <td class="table-danger">対</td>
+                  <td class="table-danger">的</td>
+                  <td class="table-danger">的</td>
+                  <td>葉</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
@@ -91,8 +172,8 @@
           <div class="card">
             <div class="card-header pt-4">熟語一覧</div>
             <div id="solvedPanel" class="card-body px-1 py-2 notranslate">
-              <button class="btn btn-light" type="button">クリアできたもの</button>
-              <button class="btn btn-secondary" type="button">できなかったもの</button>
+              <button class="btn btn-light m-1" type="button">クリアできたもの</button>
+              <button class="btn btn-secondary m-1" type="button">できなかったもの</button>
             </div>
           </div>
         </div>
@@ -110,6 +191,7 @@
       </div>
       <div class="text-muted">&copy; <a href="https://github.com/marmooo">marmooo</a></div>
     </footer>
+    <div class="drop-inline-css d-none table-primary"></div>
     <script src="index.js"></script>
   </body>
 </html>
