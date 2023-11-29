@@ -2,7 +2,7 @@ import { readLines } from "https://deno.land/std/io/mod.ts";
 
 async function build(threshold) {
   const result = [];
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 12; i++) {
     const idioms = [];
     const fileReader = await Deno.open(
       `graded-idioms-ja/dist/${i}.csv`,
@@ -11,7 +11,12 @@ async function build(threshold) {
       const arr = line.split(",");
       const word = arr[0];
       const count = parseInt(arr[1]);
-      if (word.length == 3 && count >= threshold) {
+      if (word.length != 3) continue;
+      if (i <= 9) {
+        if (threshold <= count) {
+          idioms.push(word);
+        }
+      } else {
         idioms.push(word);
       }
     }
