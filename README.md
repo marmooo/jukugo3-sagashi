@@ -4,12 +4,13 @@
 
 ## Installation
 
-install [marmooo/graded-idioms-ja](https://github.com/marmooo/graded-idioms-ja) licensed under the CC-BY 4.0
+install [marmooo/graded-idioms-ja](https://github.com/marmooo/graded-idioms-ja)
+licensed under the CC-BY-4.0
 
 ## Build
 
 ```
-deno run --allow-read --allow-write build.js
+deno run -RW build-dict.js
 bash build.sh
 ```
 
