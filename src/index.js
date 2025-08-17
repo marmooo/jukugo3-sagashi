@@ -442,26 +442,28 @@ function resizeFontSize(node) {
   node.style.fontSize = fontSize + "px";
 }
 
+async function initProblems() {
+  const response = await fetch("words.lst");
+  const text = await response.text();
+  text.trim().split("\n").forEach((line) => {
+    idiomsList.push(line.split(","));
+  });
+  idioms = idiomsList[3];
+  generateGame();
+  strictSolution();
+  while (solvedPanel.firstChild) {
+    solvedPanel.removeChild(solvedPanel.firstChild);
+  }
+  showAnswer();
+}
+
+await initProblems();
+
 const meiroObj = document.getElementById("meiro");
 resizeFontSize(meiroObj);
 globalThis.addEventListener("resize", () => {
   resizeFontSize(meiroObj);
 });
-
-fetch("words.lst")
-  .then((response) => response.text())
-  .then((text) => {
-    text.trim().split("\n").forEach((line) => {
-      idiomsList.push(line.split(","));
-    });
-    idioms = idiomsList[3];
-    generateGame();
-    strictSolution();
-    while (solvedPanel.firstChild) {
-      solvedPanel.removeChild(solvedPanel.firstChild);
-    }
-    showAnswer();
-  });
 
 document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("startButton").onclick = startGame;
